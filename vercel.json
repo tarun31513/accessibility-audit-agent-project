@@ -1,0 +1,19 @@
+{
+  "functions": {
+    "api/*.ts": {
+      "runtime": "nodejs20.x",
+      "maxDuration": 26,
+      "memory": 1536
+    }
+  },
+  "rewrites": [
+    {
+      "source": "/api/(.*)",
+      "destination": "/api/$1"
+    },
+    {
+      "source": "/(.*)",
+      "destination": "/"
+    }
+  ]
+}
